@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react'
+import BooksContext from './context/BooksContext'
+import BookForm from './components/BookForm'
+import Books from './components/Books'
+
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+     
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BooksContext>
+      <div className="app">
+        <h1>
+          Favourites Books Application
+        </h1>
+        <div className="app__container">
+          <BookForm />
+          <Books />
+        </div>
+      </div>
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        rtl={false}
+      />
+    </BooksContext>
+  )
 }
 
 export default App;

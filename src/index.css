@@ -7,7 +7,90 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  height: max-content;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-family: sans-serif;
+}
+
+textarea {
+  font-weight: normal;
+  height: 250px;
+}
+
+button {
+  padding: .7em 1.5em;
+  cursor: pointer;
+}
+
+
+.book {
+  position: relative;
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.book__name {
+  font-weight: bold;
+}
+
+.book__desc {
+  font-weight: 200;
+}
+
+.book__id {
+  font-size: .7em;
+}
+
+.book__actions {
+  position: absolute;
+  top: 1em;
+  right: 0;
+}
+
+.book__actions > span {
+  cursor: pointer;
+  font-size: .9em;
+}
+
+.book__actions > span:first-child {
+  margin-right: .5em;
+}
+.book__actions > span:first-child:hover {
+  text-decoration: underline;
+}
+
+.bookform__header {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.bookform__header--title {
+  margin: 0;
+}
+
+.bookform__header--deleteId {
+  display: inline-block;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
